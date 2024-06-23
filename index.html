@@ -1,104 +1,94 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <title>DN Polytechnic Meerut</title>
     <style>
-        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .welcome-section, .about-section, .contact-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            height: 5%;
+            width: 10%;
+        }
     </style>
-    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
 </head>
 <body>
-    <!-- outer start  -->
-    <div class="container-fluid">
-        <!-- header start  -->
-        <div class="row bg-info">
-            <div class="col-sm-2 mx-auto my-auto">
-                <img src="{% static 'img/logo.jpg' %}" alt="" height="100px">
-            </div>
-            <div class="col-sm-8 my-auto">
-                <h2 style="color:rgb(175, 0, 28)">Human Resource Management System</h2>
-            </div>
-            <div class="col-sm-2 mx-auto my-auto">
-                <div class="btn btn-danger"><a class="text-decoration-none text-light" href="{% url 'adlogin'%}"> <img src="{% static 'img/admin.jpg' %}" alt="" height="100px">
-                Admin </a></div>
-            </div>
-        </div>
-        <!-- header end  -->
-        <!-- navbar start  -->
-        <div class="container-fluid">
-        <div class="row pt-1">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Login/Registration</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                </ul>
-        </div>
-      </div>
-        <!-- navbar end  -->
-        <!-- slider start  -->
-        <div class="row pt-5">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'img/img.png' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'img/img2.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'img/img1.png' %}" class="d-block w-100" alt="..."">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-        <!-- slider end  -->.
-        <!-- content start  -->
-        <div class="row pt-5">
-            <div class="col-sm-8">
-                
-                    
-                    {% block body %}
-                        
-                    {% endblock  %}
-                        
-            </div>
-            <div class="col-sm-4">
-                <h2>ABOUT US</h2>
-                <marquee behavior="scrollup" direction="up" scrollamount="2" height="600"  style=" color: aqua; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../static/img/img1.png);background-size: cover;" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo exercitationem enim recusandae sapiente repudiandae harum quam accusamus dolor facilis possimus provident voluptas cupiditate laboriosam tempora, dolore ducimus quas nihil?
-                </marquee>
-            </div>
-        </div>
-        <!-- content end  -->
-        <!-- footer start  -->
-        <div class="row background">
-            <h2 class="text-center">About Us</h2>
-            <h6 class="align-center center" style="background: linear-gradient(rgba(250,100,100,0.6),rgba(100,255,1,0.6));
-            color:red; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../static/img/img1.png);background-size: cover;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit praesentium obcaecati sed voluptas soluta porro ea excepturi id totam exercitationem deleniti nisi, commodi minima omnis beatae incidunt quo, consectetur at. Iste praesentium perspiciatis voluptatem aliquid ut. Aliquid rem sequi, necessitatibus fugiat neque assumenda quidem nostrum sunt praesentium minus nisi excepturi id ea cupiditate obcaecati sit autem dicta est, quisquam minima dolores. Neque soluta repudiandae eos explicabo quia? Laboriosam ratione, dicta cupiditate modi, voluptatem dolores ullam sed iure eligendi, porro ea maxime. Expedita optio accusantium, eligendi unde, ut asperiores vero repudiandae itaque cumque fuga ad. Quisquam consequatur consectetur sint odit quam. Ullam animi odio quod, ratione pariatur laborum rerum nisi aperiam rem voluptatem natus asperiores tenetur, commodi omnis quam ipsam deleniti excepturi! Molestias ad deleniti asperiores eveniet maiores ducimus eaque! Sed eligendi, mollitia aut velit hic aliquid error quia, quidem autem impedit corrupti fugiat possimus illo ducimus pariatur, sint consectetur natus?</h6>
-        </div>
-        <!-- footer end  -->
+    <header>
+        <img src="C:\Users\wwwar\OneDrive\Pictures\LOGO_DNP.jpg" alt="LOGO_DNP">
+        <h1>DN Polytechnic Meerut</h1>
+    </header>
+    <nav>
+        <a href="#welcome">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="welcome" class="welcome-section">
+            <h2>Welcome to DN Polytechnic Meerut</h2>
+            <p>Our mission is to provide quality education and training to prepare our students for a successful career.</p>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>DN Polytechnic Meerut offers a range of technical courses aimed at providing the best education and training to our students.</p>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Email: info@dnpolytechnicmeerut.com</p>
+            <p>Phone: +91-1234567890</p>
+            <button onclick="displayAlert()">Click for more info</button>
+        </section>
     </div>
-    <!-- outer end  -->
+    <footer>
+        <p>&copy; 2024 DN Polytechnic Meerut. All rights reserved.</p>
+    </footer>
+    <script>
+        function displayAlert() {
+            alert('You can visit our campus at Meerut, Uttar Pradesh.');
+        }
+    </script>
 </body>
 </html>
